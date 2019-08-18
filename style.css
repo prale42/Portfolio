@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: LexDeca;
+}
+
+@font-face {
+  font-family: LexDeca;
+  src: url(./Lexend_Deca/LexendDeca-Regular.ttf);
+}
+
+.navbar {
+  background-color: #1371a6;
+  height: 5vh;
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+  color: #e1ffff;
+}
+
+.navbar h2 {
+  padding: 10px 0 10px 5px;
+}
+
+.navbar svg {
+  margin-right: 20px;
+}
+
+.navbar ul {
+  margin-right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 50%;
+  list-style-type: none;
+}
+
+.navbar li {
+  padding: 20px;
+  -webkit-transition: -webkit-transform 0.15s ease-out;
+  transition: -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
+}
+
+.navbar li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #e1ffff;
+}
+
+.main {
+  height: 95vh;
+  width: 100%;
+  color: #e1ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-pic {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text h1 {
+  position: relative;
+  font-size: 42px;
+  width: 60%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.text h3 {
+  font-size: 36px;
+}
+
+.text button {
+  margin-top: 20px;
+  border-radius: 4px;
+  min-height: 30px;
+  background-color: #1371a6;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.text button a {
+  text-decoration: none;
+  color: #e1ffff;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.text button:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.navbar li:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
+  height: 95vh;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.header .about-pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header h1 {
+  padding-left: 20px;
+  position: absolute;
+  text-align: center;
+  color: #e1ffff;
+  top: 75%;
+}
+
+.about-text {
+  position: relative;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr 1fr;
+  grid-gap: 15px;
+  color: #424949;
+}
+
+.about-text .text-box {
+  padding: 10px 5px;
+}
+
+.about-text .text-box h3 {
+  padding-bottom: 10px;
+}
+/*# sourceMappingURL=style.css.map */

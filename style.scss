@@ -1,0 +1,148 @@
+$textColor: #e1ffff;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: LexDeca;
+}
+
+@font-face {
+	font-family: LexDeca;
+	src: url(./Lexend_Deca/LexendDeca-Regular.ttf);
+}
+.navbar {
+	background-color: #1371a6;
+	height: 5vh;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0px;
+	color: $textColor;
+
+	h2 {
+		padding: 10px 0 10px 5px;
+	}
+
+	svg {
+		margin-right: 20px;
+	}
+
+	ul {
+		margin-right: 35px;
+		display: flex;
+		right: 50%;
+		list-style-type: none;
+	}
+
+	li {
+		padding: 20px;
+		transition: transform 0.15s ease-out;
+		a {
+			font-size: 18px;
+			text-decoration: none;
+			color: $textColor;
+		}
+	}
+}
+
+.main {
+	height: 95vh;
+	width: 100%;
+	color: $textColor;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+}
+
+.bg-pic {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.text {
+	position: absolute;
+	top: 35%;
+	text-align: center;
+	text-shadow: 2px 2px black;
+	align-items: center;
+	h1 {
+		position: relative;
+		font-size: 42px;
+		width: 60%;
+		margin: auto;
+		padding: 20px 0;
+	}
+	h3 {
+		font-size: 36px;
+	}
+	button {
+		margin-top: 20px;
+		border-radius: 4px;
+		min-height: 30px;
+		background-color: #1371a6;
+		border: none;
+		transition: transform 0.3s ease-out;
+		a {
+			text-decoration: none;
+			color: $textColor;
+			font-size: 18px;
+			padding: 10px 20px;
+		}
+	}
+}
+
+.text button:hover {
+	transform: scale(1.5);
+}
+
+.navbar li:hover {
+	transform: scale(1.5);
+}
+
+.about {
+	display: grid;
+	grid-template-rows: 60% 40%;
+	height: 95vh;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	.about-pic {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	h1 {
+		padding-left: 20px;
+		position: absolute;
+		text-align: center;
+		color: $textColor;
+		top: 75%;
+	}
+}
+
+.about-text {
+	position: relative;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-auto-rows: 1fr 1fr;
+	grid-gap: 15px;
+	color: #424949;
+
+	.text-box {
+		padding: 10px 5px;
+		h3 {
+			padding-bottom: 10px;
+		}
+	}
+}
