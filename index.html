@@ -10,15 +10,30 @@
 	<body>
 		<nav class="navbar">
 			<h2>Matej Pralas</h2>
-			<div class="nav-list">
+			<div class="ham-wrap">
+				<input type="checkbox" class="toggler" />
+				<svg
+					class="hamburger"
+					width="38"
+					height="27"
+					viewBox="0 0 38 27"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<line y1="25.5" x2="38" y2="25.5" stroke="white" stroke-width="3" />
+					<line y1="13.5" x2="38" y2="13.5" stroke="white" stroke-width="3" />
+					<line y1="1.5" x2="38" y2="1.5" stroke="white" stroke-width="3" />
+				</svg>
+			</div>
+		</nav>
+		<div class="main">
+			<div class="menu">
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</div>
-		</nav>
-		<div class="main">
 			<img
 				class="bg-pic"
 				src="./img/landing-page-pic.png"
@@ -30,7 +45,7 @@
 					job opportunities
 				</h1>
 				<h3>Are you interested?</h3>
-				<button><a href="about.html">Learn More!</a></button>
+				<button><a href="about.html">Check It Out!</a></button>
 			</div>
 		</div>
 	</body>
