@@ -7,6 +7,7 @@ $textColor: #e1ffff;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: LexDeca;
+	overflow: hidden;
 }
 
 @font-face {
@@ -17,185 +18,137 @@ $textColor: #e1ffff;
 	background-color: #0073b6;
 	height: 5vh;
 	width: 100%;
-	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 0px;
+	padding: 20px 5px;
 	color: $textColor;
-
-	h2 {
-		padding: 10px 5px;
-	}
-
-	svg {
-		margin-right: 20px;
-	}
-
-	ul {
-		margin-right: 35px;
-		display: flex;
-		right: 50%;
-		list-style-type: none;
-	}
-
-	li {
-		padding: 20px;
-		transition: transform 0.15s ease-out;
-		a {
-			font-size: 18px;
-			text-decoration: none;
-			color: $textColor;
-		}
-	}
-	.ham-wrap {
-		position: relative;
-		.toggler {
-			opacity: 0;
-			position: absolute;
-			right: 14px;
-			top: -4px;
-			height: 38px;
-			width: 50px;
-			cursor: pointer;
-			z-index: 2;
-		}
-	}
+	z-index: 1;
 }
 
 .main {
 	height: 95vh;
 	width: 100%;
-	color: $textColor;
 	display: flex;
 	flex-direction: column;
-	position: relative;
-	.menu {
+	img {
+		//these is for correcting white screen edges from the BG pic
+		transform: scale(1.05);
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+.menu {
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	.menu-text {
+		opacity: 0;
+		width: 100%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
-		position: absolute;
-		right: 45%;
-		top: 15%;
-		align-content: center;
-		z-index: 2;
-		ul {
-			list-style: none;
-			text-align: center;
-			li {
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		transform: scale(0);
+		transition: all 0.8s ease-out;
+		li {
+			color: $textColor;
+			padding: 40px 0;
+			font-size: 36px;
+			transition: transform 0.3s ease;
+			a {
 				text-decoration: none;
-				padding-top: 30px;
-				a {
-					color: #29b100;
-					font-size: 36px;
-				}
+				color: inherit;
+				cursor: pointer;
 			}
 		}
 	}
 }
 
-.bg-pic {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+.hamburger,
+.toggler {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.toggler {
+	opacity: 0;
+	z-index: 3;
+	cursor: pointer;
 }
 
 .text {
 	position: absolute;
-	text-align: center;
-	text-shadow: 2px 2px black;
-	align-items: center;
-	top: 25%;
-	h1 {
-		position: relative;
-		font-size: 42px;
-		width: 60%;
-		margin: auto;
-		padding: 40px 0;
-	}
-	h3 {
-		font-size: 30px;
-	}
-	button {
-		margin-top: 40px;
-		min-width: 180px;
-		min-height: 40px;
-		border-radius: 4px;
-		background-color: #ffd900;
-		border: none;
-		transition: transform 0.3s ease-out;
-		a {
-			text-decoration: none;
-			color: rgb(27, 27, 27);
-			font-size: 18px;
-			padding: 10px 20px;
-		}
-	}
-}
-
-.text button:hover {
-	transform: scale(1.5);
-}
-
-.navbar li:hover {
-	transform: scale(1.5);
-}
-
-.about {
-	display: grid;
-	grid-template-rows: 60% 40%;
-	height: 95vh;
-}
-
-.header {
-	position: relative;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	.about-pic {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	h1 {
-		padding-left: 20px;
-		position: absolute;
-		text-align: center;
-		color: $textColor;
-		top: 75%;
-	}
-}
-
-.about-text {
-	position: relative;
-	padding: 20px;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-auto-rows: 1fr 1fr;
-	grid-gap: 15px;
-	color: #424949;
-
-	.text-box {
-		padding: 10px 5px;
-		h3 {
-			padding-bottom: 10px;
-			color: #424949;
-		}
-	}
-}
-
-@media (max-width: 1024px) {
-	.text {
-		h1 {
-			font-size: 32px;
-		}
-
-		h3 {
-			font-size: 22px;
-		}
-	}
-
-	.navbar {
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: $textColor;
+	text-shadow: 2px 2px black;
+	.text-inner {
+		width: 60%;
 		h2 {
-			font-size: 18px;
+			padding: 30px 0;
+		}
+		button {
+			border-radius: 6px;
+			min-width: 150px;
+			min-height: 40px;
+			background-color: #cab600;
+			border-style: none;
+			a {
+				color: inherit;
+				text-decoration: none;
+				font-size: 20px;
+				padding: 30px;
+			}
 		}
 	}
+}
+
+//Toggler actions
+.toggler:checked ~ .menu {
+	visibility: visible;
+	z-index: 3;
+}
+
+.menu > div {
+	position: absolute;
+	width: 300vw;
+	height: 300vh;
+	bottom: -30%;
+	left: -60%;
+	border-radius: 50%;
+	content: "";
+	background: rgba($color: #001a61, $alpha: 0.85);
+	z-index: 2;
+	transform: scale(0);
+	transition: all 0.6s ease-out;
+}
+
+.toggler:checked ~ .menu > div {
+	transform: scale(1);
+}
+
+.toggler:checked ~ .menu > .menu-text {
+	opacity: 1;
+	position: absolute;
+	z-index: 3;
+	transform: scale(1);
+}
+
+.toggler:checked ~ .menu .menu-text li:hover {
+	transform: scale(1.4);
 }
