@@ -80,6 +80,7 @@ $menuOverlayColor: rgba(
 				font-size: 20px;
 				padding: 0 10px;
 				align-content: center;
+				font-weight: 600;
 			}
 		}
 	}
@@ -135,10 +136,10 @@ $menuOverlayColor: rgba(
 @media (max-width: 720px){
 	.container .text-inner{
 		h1{
-		font-size: 28px;
+		font-size: 22px;
 		}
 		h2{
-			font-size: 20px;
+			font-size: 18px;
 		}
 
 		a{

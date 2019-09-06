@@ -100,6 +100,7 @@
   padding: 0 10px;
   -ms-flex-line-pack: center;
       align-content: center;
+  font-weight: 600;
 }
 
 .header {
@@ -163,10 +164,10 @@
 
 @media (max-width: 720px) {
   .container .text-inner h1 {
-    font-size: 28px;
+    font-size: 22px;
   }
   .container .text-inner h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .container .text-inner a {
     font-size: 18px;
