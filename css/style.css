@@ -22,9 +22,10 @@
 .logo {
   font-size: 26px;
   position: fixed;
-  height: 5vh;
+  height: 7vh;
+  width: 100vw;
+  background: rgba(0, 26, 97, 0.85);
   color: #e1ffff;
-  margin-left: 10px;
   padding: 5px;
   z-index: 5;
 }
@@ -119,7 +120,7 @@
 
 .about-text {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   padding: 10px;
   height: 100%;
   width: 100%;
