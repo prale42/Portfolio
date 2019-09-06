@@ -87,7 +87,7 @@ $menuOverlayColor: rgba(
 .toggler:checked ~ .menu > .menu-text {
 	opacity: 1;
 	position: absolute;
-	z-index: 3;
+	z-index: 5;
 	transform: scale(1);
 }
 
