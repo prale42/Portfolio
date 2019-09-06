@@ -27,7 +27,7 @@
   background: rgba(0, 26, 97, 0.85);
   color: #e1ffff;
   padding: 5px;
-  z-index: 5;
+  z-index: 3;
 }
 
 .logo a {
